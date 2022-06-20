@@ -1,0 +1,23 @@
+FUNCTIONALITY
+
+please check if the given input is empty or not proper for later assignments (e.g. k-mer size in this assignment)
+the sizes of nodes are not bound to their parents, so resizing the window doesn't resize the TextArea, for example.
+    in FXML, please use COMPUTED_SIZE instead of assigning a fixed pref width and height.
+the last sequence in the FastA is not read in (or actually not added to the list)
+
+DESIGN
+
+formatting the text to be displayed by the view should be done either by the Presenter or the View itself, not the model
+    getText should only return the text as a String or StringProperty
+    (sorry, this was misleading in the assignment sheet itself).
+Please handle exceptions that you catch (for example in the constructor of Window)
+
+READABILITY
+why not using getters in the Presenters instead of passing the action to one-line methods in the View?
+    this complicates the readability, as the reader has to follow the flow across classes, only to end up with a one-line method.
+There's nothing wrong with keeping the view passive, as in your design right now (everything is handled by the presenter).
+    but, in my opinion, presenter can get too messy for a bigger application in this way of using the design pattern.
+    I'd move the functionality that concerns only the view (e.g. wrapping the text, printing about etc.) to the view part and not communicate with the presenter for this kind of actions at all...
+    but again, this is only my opinion, and in fact you have a mixed design, where for example you handle printing error messages in the view. so it's also not completely passive, but also not completely active.
+
+OVERALL: 10/10

@@ -1,0 +1,15 @@
+FUNCTIONALITY
+
+everything works
+
+DESIGN
+
+for the sake of modularity, I'd move the parts of the code that extracts k-mers, does the actual hash calculations, etc. to different class(es).
+FastAFileParser, as the name suggests, should only parse a fasta file and return its contents.
+Please try to adhere to the OOP concepts better in the future assignments.
+
+READABILITY
+
+instead of separating words with an underscore, we use camelCase in Java (e.g. not dna_seq_reading, but dnaSeqReading, even better isReadingDnaSeq since it's a boolean).
+
+OVERALL: 5/5

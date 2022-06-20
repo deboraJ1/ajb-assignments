@@ -1,0 +1,34 @@
+FUCNTIONALITY
+
+Instead of dnaInputField.setText("Enter your DNA sequence here."); , you should use
+dnaInputField.setPromptText("Enter your DNA sequence here.");
+
+I like the extra functionality that you implemented, with the error messages and listeners on checkboxes,
+I don't like that the inputField is cleared when clicked, though. :) It makes it impossible to make changes to the sequences.
+
+DESIGN
+
+please code to the interface when possible, this allows you to later change the implementation if necessary. for example:
+ArrayList<Character> validNucleotides = generateValidNucleotides();
+can be
+List<Character> validNucleotides = generateValidNucleotides();
+and if you need to, you could change it from ArrayList to a LinkedList, for example, at any point.
+
+READABILITY
+
+package names should start with lowercase
+that's a very long compareTo method in FourMer. You could simply use Integer.compare()
+also the while loop to check validity of k-mers is uncessarily complex, you could simply do kmer.matches("[ATGC]{4}")
+    and you actually do this twice, once in setKmer, once in calcHash
+all fields of the View class can be final
+you could also just extend BorderPane in the KmerView class, and use it as your root. but we're going to use FXML in the future, anyway. :)
+please use lambda's when possible. the ChangeListener's are pretty unnecessary, for example.
+            this.dnaInputField.focusedProperty().addListener((obsValue, oldValue, newValue) -> {
+                //code here
+            });
+            or:
+            checkBox.setOnAction(e -> updateOutputArea());
+
+
+OVERALL: 10/10
+although many remarks, overall it was quite good. thank you!

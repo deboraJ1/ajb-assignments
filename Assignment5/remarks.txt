@@ -1,0 +1,18 @@
+FUNCTIONALITY
+
+Angular drawing is broken
+Presenter line 160: that's a directory on your computer, so doesn't work for me. :)
+
+DESING
+
+Group in presenter is actually a view element
+all fields in the model (e.g. edges), could also be JavaFX properties, that way you could directly bind to them instead of updating the text field manually each time a tree is parsed.
+
+regarding static's, I don't actually have anything to add on top of my email. I like your design better. :)
+
+READABILITY
+
+never leave catch statements empty!!!
+    line 26 in AbstractWindow throws an exception for me (had to with paths...), but since the catch statement is empty, it took me ~5 minutes to find why the program terminates with a weird error.
+
+POINTS: 19/20

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Code4Mers:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Code4Mers_jar</output-path>
+    <root id="archive" name="Code4Mers.jar">
+      <element id="module-output" name="Code4Mers" />
+    </root>
+  </artifact>
+</component>
